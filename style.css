@@ -39,7 +39,7 @@ body {
 #bee {
     position: absolute;
     animation-name: bodyAnimation; 
-    animation-duration: 5s;
+    animation-duration: 3s;
     z-index: 900;
 }
 
@@ -219,6 +219,7 @@ body {
     height: 300px;
     position: absolute;
     top: 600px;
+    left: 100px;
 }
 
 .row {
@@ -236,4 +237,28 @@ body {
     height: 90px;
     font-size: 50px;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.word {
+    border: solid 1px;
+    width: 900px;
+    height: 100px;
+    position: absolute;
+    top: 300px;
+    border: transparent;
+    left: 100px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.letter {
+    width: 90px;
+    height: 85px;
+    border: solid 3px;
+    border-color: transparent transparent black transparent;
+    background: transparent;
+    font-size: 50px;
+    font-family:'Times New Roman', Times, serif;
 }
