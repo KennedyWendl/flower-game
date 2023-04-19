@@ -1,4 +1,24 @@
 
+
+@keyframes bodyAnimation 
+{
+    0% {left: 9px; top: 9px;}
+    /* 25% {left: 309px; top: 843px;};
+    50% {left: 700px; top: 343px;}; */
+    /* 20% {left: 209px; background-image:  repeating-linear-gradient(to right, #181817, #0f0f0f 2px, #ffe600 1px, #f1e35f);} */
+    100% {left: 1209px; top: 343px;};
+}
+
+@keyframes wingAnimation 
+{
+    0% {transform: rotate(230deg);}
+    25% {transform: rotate(260deg);}
+    50% {transform: rotate(300deg);}
+    75% {transform: rotate(250deg);}
+    100% {transform: rotate(230deg);}
+}
+
+
 #middle {
     position: absolute;
     border: none;
@@ -15,6 +35,89 @@
 body {
     background: lightskyblue;
 }
+
+#bee {
+    position: absolute;
+    animation-name: bodyAnimation; 
+    animation-duration: 5s;
+    z-index: 900;
+}
+
+#body {
+    position: absolute; 
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 60px;
+    background-color: transparent;
+    opacity: 1.0;
+    background-size: 20px 20px;
+    background-image:  repeating-linear-gradient(to right, #181817, #0f0f0f 2px, #ffe600 1px, #f1e35f);
+    left: 9px;
+    top: 123px;
+    /* animation-name: bodyAnimation; 
+    animation-duration: 5s; */
+}
+
+#wing1 {
+    position: absolute; 
+    border: solid 3px #b2e5ee;
+    background: #b2e5ee;
+    border-radius: 50%;
+    transform: rotate(240deg);
+    width: 70px;
+    height: 30px;
+    top: 115px;
+    left: 10px;
+    z-index: -10;
+    animation: wingAnimation 0.2s linear infinite;
+    /* animation-name: wingAnimation; 
+    animation-duration: 3s; */
+}
+
+#wing2 {
+    position: absolute; 
+    border: solid 3px #b2e5ee;
+    background: #d2f1f7;
+    border-radius: 50%;
+    transform: rotate(240deg);
+    width: 70px;
+    height: 30px;
+    top: 120px;
+    left: 0px;
+    z-index: -10;
+    animation: wingAnimation 0.2s linear infinite;
+    /* animation-name: wingAnimation; 
+    animation-duration: 3s; */
+}
+
+#eye {
+    position: absolute; 
+    border: none;
+    border-radius: 50%;
+    width: .05px;
+    height: 11px;
+    background-color: #0f0f0f;
+    left: 72px; 
+    top: 140px;
+    /* animation-name: eyeAnimation; 
+    animation-duration: 5s; */
+}
+
+/* #beeSmile {
+    position: absolute; 
+    border: solid 4px #000;
+    border-radius: 50%/100px 100px 0 0;
+    transform: rotate(180deg);
+    border-color: transparent rgb(5, 5, 5) transparent transparent;
+    background: transparent;
+    width: 10px;
+    height: 1px;
+    left: 71px; 
+    top: 157px;
+    animation-name: smileAnimation; 
+    animation-duration: 5s;
+} */
 
 #petal2 {
     transform: rotate(45deg); 
@@ -67,11 +170,18 @@ body {
     border: none;
     background: rgb(255, 174, 201);
     border-radius: 50%;
-    width: 175px;
-    height: 60px;
+    width: 320px;
+    height: 90px;
 }
  
 #flower {
     width: 500px;
     height: 500px; 
+}
+
+#showBee {
+    width: 100px; 
+    height: 100px;
+    position: absolute;
+    top: 400px;
 }
