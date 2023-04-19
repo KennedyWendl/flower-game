@@ -6,7 +6,7 @@
     /* 25% {left: 309px; top: 843px;};
     50% {left: 700px; top: 343px;}; */
     /* 20% {left: 209px; background-image:  repeating-linear-gradient(to right, #181817, #0f0f0f 2px, #ffe600 1px, #f1e35f);} */
-    100% {left: 1209px; top: 343px;};
+    100% {left: 1270px; top: 230px;};
 }
 
 @keyframes wingAnimation 
@@ -26,8 +26,8 @@
     border-radius: 50%;
     width: 55px;
     height: 55px;
-    top: 325px;
-    left: 1258px;
+    top: 339px;
+    left: 1331px;
     z-index: 10;
 }
 
@@ -143,25 +143,49 @@ body {
     left: 1200px;
 }
 
+#petal6 {
+    transform: rotate(45deg); 
+    top: 340px;
+    left: 1265px;;
+}
+
+#petal7 {
+    transform: rotate(270deg); 
+    top: 340px;
+    left: 1265px;
+}
+
+#petal8 {
+    transform: rotate(-225deg); 
+    top: 340px;
+    left: 1265px;
+}
+
+#petal9 {
+    transform: rotate(180deg); 
+    top: 340px;
+    left: 1265px;
+}
+
 #leaf {
     position: absolute;
     border: none;
     background:rgb(181, 230, 29);
     border-radius: 12px;
-    width: 25px;
+    width: 30px;
     height: 15px; 
-    top: 470px;
-    left: 1285px;
+    top: 540px;
+    left: 1355px;
 }
 
 #stem {
     position: absolute; 
     border: none;
     background:rgb(181, 230, 29);
-    width: 2px; 
-    height: 160px;
+    width: 15px; 
+    height: 260px;
     top: 380px;
-    left: 1280px;
+    left: 1350px;
     z-index: -5;
 }
 
@@ -173,15 +197,43 @@ body {
     width: 320px;
     height: 90px;
 }
+
+.middlePetal {
+    position: absolute; 
+    border: none;
+    background: rgb(243, 213, 223);
+    border-radius: 50%;
+    width: 190px;
+    height: 50px;
+    z-index: 5;
+}
  
 #flower {
     width: 500px;
     height: 500px; 
 }
 
-#showBee {
-    width: 100px; 
-    height: 100px;
+.alphabet {
+    border: solid 1px transparent; 
+    width: 900px;
+    height: 300px;
     position: absolute;
-    top: 400px;
+    top: 600px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 33%;
+    border: solid 1px transparent;
+}
+
+.keyboardButton {
+    width: 85px;
+    height: 90px;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
 }
