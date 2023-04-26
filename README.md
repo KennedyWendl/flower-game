@@ -1,3 +1,3 @@
 # flowerWordGame
-Built a redesigned version of Hangman using HTML, and JavaScript. Make API requests to generate a random word.
+Built a word game using HTML, CSS, and JavaScript.Used fetch to generate random words using API requests/
 
