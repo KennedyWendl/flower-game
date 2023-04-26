@@ -13,11 +13,13 @@
     </audio>
     <header>
         Welcome to Hangman - redesigned!
-        <h1>
-            Start by guessing a letter down below to figure out the hidden word. Try to solve in as few guesses as possible, otherwise game's over!
-        </h1>
+        Start by guessing a letter down below to figure out the hidden word. Try to avoid eight wrong guesses, otherwise game's over. Good luck! 
     </header>
     <br>
+    <!-- <div class = mainButtons >
+        <button class = "topRowButtons" id = "restart" ></button>
+        <button class = "topRowButtons" id = "directions" ></button>
+    </div> -->
     <div id = flower >
         <button id = middle ></button>
         <button class = petal id = petal2  ></button>
@@ -35,7 +37,14 @@
             <button id = wing1 ></button>
             <button id = wing2 ></button>
             <button id = eye ></button>
-            <!-- <button id = beeSmile ></button> -->
+        </div>
+        <div class = "popupForm" id = "popup" >
+            <p> Yikes you lost the game! The word was:  </p>
+            <br>
+            <button class = "resetButton" id = "reset" >  Play again! </button>
+            <button class = "resetButton" id = "newGame" > 
+                <a href="https://github.com/KennedyWendl"> Other Games </a>
+            </button>
         </div>
         <div class = "alphabet">
             <div class = "row"  >
@@ -81,6 +90,12 @@
             <button class = "letter" id = "letter7" hidden ></button>
             <button class = "letter" id = "letter8" hidden ></button>
             <button class = "letter" id = "letter9" hidden ></button>
+            <button class = "letter" id = "letter10" hidden ></button>
+            <button class = "letter" id = "letter11" hidden ></button>
+            <button class = "letter" id = "letter12" hidden ></button>
+            <button class = "letter" id = "letter13" hidden ></button>
+            <button class = "letter" id = "letter14" hidden ></button>
+            <button class = "letter" id = "letter15" hidden ></button>
         </div>
     </div>
 </body>

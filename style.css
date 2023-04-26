@@ -1,11 +1,6 @@
-
-
-@keyframes bodyAnimation 
+ @keyframes bodyAnimation 
 {
     0% {left: 9px; top: 9px;}
-    /* 25% {left: 309px; top: 843px;};
-    50% {left: 700px; top: 343px;}; */
-    /* 20% {left: 209px; background-image:  repeating-linear-gradient(to right, #181817, #0f0f0f 2px, #ffe600 1px, #f1e35f);} */
     100% {left: 1270px; top: 230px;};
 }
 
@@ -18,6 +13,9 @@
     100% {transform: rotate(230deg);}
 }
 
+header {
+    font-size: 30px;
+}
 
 #middle {
     position: absolute;
@@ -31,15 +29,14 @@
     z-index: 10;
 }
 
-
 body {
-    background: lightskyblue;
+    background: rgb(176, 212, 245);
 }
 
 #bee {
     position: absolute;
     animation-name: bodyAnimation; 
-    animation-duration: 3s;
+    animation-duration: 2.5s;
     z-index: 900;
 }
 
@@ -55,8 +52,6 @@ body {
     background-image:  repeating-linear-gradient(to right, #181817, #0f0f0f 2px, #ffe600 1px, #f1e35f);
     left: 9px;
     top: 123px;
-    /* animation-name: bodyAnimation; 
-    animation-duration: 5s; */
 }
 
 #wing1 {
@@ -71,8 +66,6 @@ body {
     left: 10px;
     z-index: -10;
     animation: wingAnimation 0.2s linear infinite;
-    /* animation-name: wingAnimation; 
-    animation-duration: 3s; */
 }
 
 #wing2 {
@@ -87,8 +80,6 @@ body {
     left: 0px;
     z-index: -10;
     animation: wingAnimation 0.2s linear infinite;
-    /* animation-name: wingAnimation; 
-    animation-duration: 3s; */
 }
 
 #eye {
@@ -100,24 +91,7 @@ body {
     background-color: #0f0f0f;
     left: 72px; 
     top: 140px;
-    /* animation-name: eyeAnimation; 
-    animation-duration: 5s; */
 }
-
-/* #beeSmile {
-    position: absolute; 
-    border: solid 4px #000;
-    border-radius: 50%/100px 100px 0 0;
-    transform: rotate(180deg);
-    border-color: transparent rgb(5, 5, 5) transparent transparent;
-    background: transparent;
-    width: 10px;
-    height: 1px;
-    left: 71px; 
-    top: 157px;
-    animation-name: smileAnimation; 
-    animation-duration: 5s;
-} */
 
 #petal2 {
     transform: rotate(45deg); 
@@ -170,20 +144,21 @@ body {
 #leaf {
     position: absolute;
     border: none;
-    background:rgb(181, 230, 29);
+    background:rgb(172, 214, 44);
     border-radius: 12px;
     width: 30px;
     height: 15px; 
-    top: 540px;
+    top: 560px;
     left: 1355px;
+    z-index: -10;
 }
 
 #stem {
     position: absolute; 
     border: none;
-    background:rgb(181, 230, 29);
+    background:rgb(172, 214, 44);
     width: 15px; 
-    height: 260px;
+    height: 280px;
     top: 380px;
     left: 1350px;
     z-index: -5;
@@ -191,7 +166,8 @@ body {
 
 .petal{
     position: absolute; 
-    border: none;
+    border: solid 2px;
+    border-color: transparent rgb(243, 213, 223) transparent rgb(243, 213, 223);
     background: rgb(255, 174, 201);
     border-radius: 50%;
     width: 320px;
@@ -241,12 +217,12 @@ body {
 
 .word {
     border: solid 1px;
-    width: 900px;
+    width: 1000px;
     height: 100px;
     position: absolute;
     top: 300px;
     border: transparent;
-    left: 100px;
+    left: 50px;
     display: flex;
     gap: 15px;
     align-items: center;
@@ -261,4 +237,35 @@ body {
     background: transparent;
     font-size: 50px;
     font-family:'Times New Roman', Times, serif;
+}
+
+.popupForm {
+    box-sizing: border-box;
+    display: none;
+    z-index: 200;
+}
+
+#popup {
+    background-color: #ffffff;
+    width: 800px;
+    height: 600px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.resetButton {
+    top: 200px;
+    width: 130px;
+    height: 70px;
+}
+
+#newGame {
+    text-decoration: none;
 }
