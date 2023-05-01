@@ -264,8 +264,16 @@ body {
     top: 200px;
     width: 130px;
     height: 70px;
+    background-color: rgb(243, 213, 223);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
 }
 
-#newGame {
-    text-decoration: none;
+#correctWord {
+    font-size: 50px; 
+    font-weight: bold; 
+    margin: 20%;
 }
+/* #newGame {
+    text-decoration: none;
+} */

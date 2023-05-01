@@ -12,14 +12,8 @@
         <source src="bee.mp3" type="audio/mp3">
     </audio>
     <header>
-        Welcome to Hangman - redesigned!
         Start by guessing a letter down below to figure out the hidden word. Try to avoid eight wrong guesses, otherwise game's over. Good luck! 
     </header>
-    <br>
-    <!-- <div class = mainButtons >
-        <button class = "topRowButtons" id = "restart" ></button>
-        <button class = "topRowButtons" id = "directions" ></button>
-    </div> -->
     <div id = flower >
         <button id = middle ></button>
         <button class = petal id = petal2  ></button>
@@ -40,11 +34,11 @@
         </div>
         <div class = "popupForm" id = "popup" >
             <p> Yikes you lost the game! The word was:  </p>
-            <br>
+            <p id = "correctWord"> </p>
             <button class = "resetButton" id = "reset" >  Play again! </button>
-            <button class = "resetButton" id = "newGame" > 
-                <a href="https://github.com/KennedyWendl"> Other Games </a>
-            </button>
+            <a href ="https://github.com/KennedyWendl" target = "_blank" > 
+                <button class = "resetButton" id = "newGame"> Other Games </button> 
+            </a>
         </div>
         <div class = "alphabet">
             <div class = "row"  >
