@@ -262,11 +262,11 @@ body {
 
 .resetButton {
     top: 200px;
-    width: 130px;
-    height: 70px;
+    width: 140px;
+    height: 80px;
     background-color: rgb(243, 213, 223);
     font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 #correctWord {
@@ -274,6 +274,7 @@ body {
     font-weight: bold; 
     margin: 20%;
 }
-/* #newGame {
-    text-decoration: none;
-} */
+
+#flowerGif {
+    margin: -28%;
+}

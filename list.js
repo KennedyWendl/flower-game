@@ -3,6 +3,7 @@ var petalNum = 0;
 
 let beeButton = document.getElementById("showBee");
 let beeBody = document.getElementById("bee");
+let endMessage = document.getElementById("endMessage"); 
 let gameEndScreen = document.getElementById("endGame");
 let gameWonScreen = document.getElementById("winGame");
 let popup = document.getElementById("popup");
@@ -25,6 +26,7 @@ async function getApi(test) {
     const response = await test;
     var word = await response.json();
     var selectedWord = word['word'].toLowerCase();
+    var listOfLetters = [];
 
     console.log(selectedWord);
     reset.addEventListener("click", function myFunction() {window.location.reload()});
@@ -39,13 +41,18 @@ async function getApi(test) {
 
     function guessLetter(letter) {
         var letterFound = false;  
-
         console.log(letter);
+
         for (let i = 0; i < selectedWord.length; i++){
             if (selectedWord.charAt(i) == letter){
                 elements[i].textContent = letter; 
+                listOfLetters.push(letter);
                 letterFound = true; 
             }
+        }
+
+        if (listOfLetters.length == selectedWord.length) {
+            wonGame();
         }
 
         if (!letterFound) {
@@ -58,7 +65,7 @@ async function getApi(test) {
     }
 
     function showBee() {
-        // beeNoise.play();
+        beeNoise.play();
         beeBody.removeAttribute("hidden");
         setTimeout(() => {removePetal(petalNum); beeBody.setAttribute("hidden", ""); petalNum += 1;}, 2400); 
     }
@@ -73,6 +80,11 @@ async function getApi(test) {
 
     function lostGame() {
         showWord.innerHTML = selectedWord;
+        popup.style.display = "block"; 
+    }
+
+    function wonGame() {
+        endMessage.innerHTML = "Congratulations! You won the game!"
         popup.style.display = "block"; 
     }
 
